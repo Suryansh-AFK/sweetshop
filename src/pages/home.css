@@ -1,0 +1,133 @@
+
+.logo {
+    height: 100px;
+    margin-bottom: 30px;
+    opacity: 0; 
+    animation: fadeIn 0.5s ease-in forwards; 
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; 
+    }
+}
+
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.loader.fade-out {
+    opacity: 0;
+}
+
+.name {
+    font-family: "Poppins", system-ui;
+    display: flex;
+    flex-direction: column;
+    line-height: 36px;
+    font-size: 32px;
+    font-weight: 600;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+.nleft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins",sans-serif;
+}
+.nlogo{
+    height: 35px;
+    margin-right: 8px;
+
+}
+.nmain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.nname{
+    line-height: 22px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.nslogan{
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.nright{
+    display: flex;
+    justify-content: space-between;
+}
+.nopts {
+    height: max-content;
+    width: max-content;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-left: 25px;
+    margin-right: 25px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+}
+
+.nopts::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    transition: width 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nopts:hover::after {
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 764px) {
+    .loader {
+        height: 90vh;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nright{
+        width: 100%;
+    }
+    .nopts{
+        margin: 0px;
+        margin-top: 10px;
+    }
+    .body{
+        background-color: #000;
+        width: 100%;
+        height: 78vh;
+    }
+}

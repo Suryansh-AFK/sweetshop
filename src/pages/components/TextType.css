@@ -1,0 +1,21 @@
+.text-type__content{
+  color: #000;
+}
+
+.text-type {
+  display: inline-block;
+  white-space: pre-wrap;
+  color: #000;
+}
+
+.text-type__cursor {
+  margin-left: 0.25rem;
+  display: inline-block;
+  opacity: 1;
+  color: #000;
+}
+
+.text-type__cursor--hidden {
+  display: none;
+  color: #000;
+}
